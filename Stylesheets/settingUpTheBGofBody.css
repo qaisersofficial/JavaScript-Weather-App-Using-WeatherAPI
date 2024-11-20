@@ -1,0 +1,47 @@
+/* General Styles */
+div#weatherapp-container {
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+  
+  /* Morning Background */
+  div#weatherapp-container.morning {
+    background-image:url("../images/Morning.jpg");
+    color: #333;
+  }
+  
+  /* Afternoon Background */
+  div#weatherapp-container.afternoon {
+    background-image:url("../images/Afternoon.jpg");
+    color: #333;
+  }
+  
+  /* Night Background */
+  div#weatherapp-container.night {
+    background-image: url("../images/Night.jpg");
+    color: #fff;
+  }
+  
+  /* Rainy Background */
+  div#weatherapp-container.rainy {
+    background-image: url("../images/Rainy.jpg");
+    /* color: firebrick; */
+  }
+  
+  /* Cloudy Background */
+  div#weatherapp-container.cloudy {
+    background-image: url('../images/Cloudy.jpg') no-repeat center center/cover;
+    color: #333;
+  }
+  
+  /* Default Background */
+  div#weatherapp-container.default {
+    background-image: linear-gradient(to bottom, #f0f0f0, #ffffff);
+    color: #333;
+  }
+  
