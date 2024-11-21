@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./Stylesheets/AppData-container.css" />
     <link rel="stylesheet" href="./Stylesheets/Header.css" />
     <link rel="stylesheet" href="./Stylesheets/search-section.css" />
+    <link rel="stylesheet" href="./Stylesheets/current-weather.css" />
     <script src="./js/code.js"></script>
     <script src="./js/ChangingBg.js" defer></script>
   </head>
@@ -35,6 +36,53 @@
           <p id="error-message" class="hidden">
             City not found. Please try again!
           </p>
+        </section>
+        <!-- Current Weather Section -->
+        <section class="current-weather">
+          <!--  nichy waly weather-card to yeh class deni hai -->
+          <div id="weather-card" class="hidden">
+            <h2 id="city-name">City Name</h2>
+            <div class="weather-situation">
+              <div class="weather-icon">
+                <img
+                  id="weather-icon"
+                  src="./images/cloud-icon.png"
+                  alt="Weather Icon"
+                />
+              </div>
+              <div class="temperature">
+                <h3 id="temperature">27°C</h3>
+              </div>
+            </div>
+            <div class="details">
+              <div class="hum-wind-container">
+                <div class="humidity-container">
+                  <div>
+                    <p>Humidity:</p>
+                  </div>
+                  <div>
+                    <p id="humidity">65%</p>
+                  </div>
+                </div>
+                <div class="wind-speed-container">
+                  <div>
+                    <p>Wind:</p>
+                  </div>
+                  <div>
+                    <p id="wind-speed">10 km/h</p>
+                  </div>
+                </div>
+              </div>
+              <div class="last-updated-container">
+                <div>
+                  <p>Last updated:</p>
+                </div>
+                <div>
+                  <p id="last-updated">10:05 AM</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
