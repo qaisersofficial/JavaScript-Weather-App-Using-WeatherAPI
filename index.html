@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./Stylesheets/settingUpTheBGofBody.css" />
     <link rel="stylesheet" href="./Stylesheets/AppData-container.css" />
     <link rel="stylesheet" href="./Stylesheets/Header.css" />
+    <link rel="stylesheet" href="./Stylesheets/search-section.css" />
     <script src="./js/code.js"></script>
     <script src="./js/ChangingBg.js" defer></script>
   </head>
@@ -20,6 +21,21 @@
         <header>
           <h1>Weather</h1>
         </header>
+        <!-- Search Section -->
+        <section class="search-section">
+          <div class="search-container">
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Please enter the name of any city!"
+              required
+            />
+            <button id="search-btn">Search</button>
+          </div>
+          <p id="error-message" class="hidden">
+            City not found. Please try again!
+          </p>
+        </section>
       </div>
     </div>
   </body>
