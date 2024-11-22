@@ -52,3 +52,38 @@
     font-size: 1em;
     color: rgb(136, 6, 6);
   }
+  @media (max-width:375px){
+    .hum-wind-container{
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  @media (min-width: 450px) and (max-width: 1024px) {
+    #weather-card {
+        width: 75%;
+    }
+    #city-name{
+        text-align: left;
+    }
+    .hum-wind-container{
+        justify-content:flex-start;
+        gap: 45px;
+    }
+    .weather-situation {
+        justify-content: center;
+    }
+    .last-updated-container {
+     justify-content: center;
+    }
+  }
+  
+  @media (max-width:650px){
+    #weather-card{
+        width: 90%;
+    }
+  }
+  @media (min-width: 1024px) and (max-width: 1090px){
+    #weather-card{
+        width: 65%;
+    }
+  }
