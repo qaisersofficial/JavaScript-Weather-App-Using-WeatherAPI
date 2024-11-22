@@ -2,8 +2,10 @@ function setDynamicBackground(condition) {
   const hour = new Date().getHours();
   const bgDiv = document.getElementById("weatherapp-container");
   const searchButton = document.getElementById("search-btn");
+  const changeColor = document.getElementById("current-weather-color");
     bgDiv.className = "";
     searchButton.style.backgroundColor = "";
+    changeColor.style.color = "";
     // console.log(bgDiv);
   if (condition.includes("rain")) {
     bgDiv.classList.add("rainy");
@@ -17,13 +19,16 @@ function setDynamicBackground(condition) {
     bgDiv.classList.add("morning");
     searchButton.style.backgroundColor = "#ffd700";
     searchButton.style.color= "#552b00";
+    changeColor.style.color = "	#5C4033";
   } else if (hour >= 12 && hour < 18) {
     bgDiv.classList.add("afternoon");
     searchButton.style.backgroundColor = "#007bff";
+    changeColor.style.color="#354549";
   } else if (hour >= 18 || hour < 6) {
     bgDiv.classList.add("night");
     searchButton.style.backgroundColor = "#483d8b";
     searchButton.style.color= "#fadfb9";
+    changeColor.style.color = "#988558";
    
   } else {
     bgDiv.classList.add("default");
