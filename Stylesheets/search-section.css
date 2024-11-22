@@ -38,9 +38,8 @@
     transition: padding 1s ease-in;
     /* border: 1px solid white; */
   }
-  /* disapper it later */
   .hidden {
-    /* display: none; */
+    display: none;
   }
   @media (max-width: 556px){
     .search-container{
