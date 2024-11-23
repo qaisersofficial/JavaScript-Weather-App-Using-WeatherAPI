@@ -51,7 +51,16 @@ function updateWeatherUI(data) {
     weatherCard.classList.add("hidden");
   }
 }
-
+//  Show the spinner while fetching data
+function showSpinner() {
+  const spinner = document.querySelector(".loader");
+  spinner.style.display = "grid";
+}
+// Hide the spinner after fetching data
+function hideSpinner() {
+  const spinner = document.querySelector(".loader");
+  spinner.style.display = "none";
+}
 //  Handle the search button click event
 
 async function handleSearchButtonClick() {
@@ -61,8 +70,11 @@ async function handleSearchButtonClick() {
     alert("Please enter a city name!");
     return;
   }
-
+  // Show spinner before starting the fetch process
+  showSpinner();
   clearWeatherUI();
   const weatherData = await fetchWeatherData(cityInput);
+  // Hide spinner after the data is fetched
+  hideSpinner();
   updateWeatherUI(weatherData);
 }

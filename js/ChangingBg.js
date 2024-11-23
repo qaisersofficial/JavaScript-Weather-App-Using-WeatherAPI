@@ -28,7 +28,7 @@ function setDynamicBackground(condition) {
     bgDiv.classList.add("night");
     searchButton.style.backgroundColor = "#483d8b";
     searchButton.style.color= "#fadfb9";
-    changeColor.style.color = "#988558";
+    changeColor.style.color = "rgb(86 61 6)";
    
   } else {
     bgDiv.classList.add("default");
