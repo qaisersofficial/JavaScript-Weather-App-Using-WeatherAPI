@@ -1,7 +1,8 @@
 // Base URL and API Key for WeatherAPI
-const API_KEY = "13ad90ae1a9f4d7384484112241911";
+const API_KEY = "348a0d8017f1448a91d171151242311";
 const BASE_URL = "https://api.weatherapi.com/v1/current.json";
-
+// chache expiration time 
+const chacheExpTime = 30 * 60 * 1000;
 /** 
     Fetch weather data from the API
     @param {string} city - The city name to fetch data for
@@ -14,13 +15,46 @@ async function fetchWeatherData(city) {
     if (!response.ok) {
       throw new Error(`City not found: ${response.status}`);
     }
-    return await response.json();
+    const data = await response.json();
+    chacheWeatherData(city, data);
+    return data;
   } catch (error) {
     console.error("Error fetching weather data:", error.message);
     return null;
   }
 }
+/**
+  Cache the weather data in localStorage with a timestamp
+ @param {string} city - The city name to fetch data
+ @param {object} data - The weather data to cache
+ */
+function chacheWeatherData(city, data) {
+  const chacheData = {
+    timestap: new Date().getTime(),
+    data: data
+  };
+  localStorage.setItem(city, JSON.stringify(chacheData));
+}
+/**
+ * Get cached weather data for a city if it exists and is not expired
+ @param {string} city - The city name
+ @returns {object|null} - Cached weather data or null if expired or not found
+ */
+function getCachedWeatherData(city) {
+  const cachedData = localStorage.getItem(city);
+  if (!cachedData) return null;
 
+  const parsedData = JSON.parse(cachedData);
+  const currentTime = new Date().getTime();
+
+  // If the cached data is expired, remove it
+  if (currentTime - parsedData.timestamp > chacheExpTime) {
+    localStorage.removeItem(city);
+    return null;
+  }
+
+  return parsedData.data;
+}
 //  Clear the current weather display
 function clearWeatherUI() {
   document.getElementById("weather-card").classList.add("hidden");
@@ -70,6 +104,13 @@ async function handleSearchButtonClick() {
     alert("Please enter a city name!");
     return;
   }
+  // Check if there's cached data available for the city
+  const cachedData = getCachedWeatherData(cityInput);
+
+  if (cachedData) {
+    // If cached data is available, use it and skip the API call
+    updateWeatherUI(cachedData);
+  } else {
   // Show spinner before starting the fetch process
   showSpinner();
   clearWeatherUI();
@@ -77,4 +118,5 @@ async function handleSearchButtonClick() {
   // Hide spinner after the data is fetched
   hideSpinner();
   updateWeatherUI(weatherData);
+}
 }
