@@ -45,4 +45,8 @@ div#weatherapp-container {
     background-image: linear-gradient(to bottom, #f0f0f0, #ffffff);
     color: #333;
   }
-  
+  @media (max-width:1425px){
+    div#weatherapp-container {
+      height: fit-content;
+    }
+  }
