@@ -23,7 +23,7 @@ function setDynamicBackground(condition) {
   } else if (hour >= 12 && hour < 18) {
     bgDiv.classList.add("afternoon");
     searchButton.style.backgroundColor = "#007bff";
-    changeColor.style.color="#354549";
+    changeColor.style.color="#FFFFFF";
   } else if (hour >= 18 || hour < 6) {
     bgDiv.classList.add("night");
     searchButton.style.backgroundColor = "#483d8b";

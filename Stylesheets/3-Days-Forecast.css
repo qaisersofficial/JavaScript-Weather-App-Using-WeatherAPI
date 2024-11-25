@@ -1,5 +1,5 @@
 /* 3-Day Forecast */
-.forecast {
+#forecast {
     margin-top: 20px;
   }
   
@@ -12,6 +12,7 @@
   .forecast-card {
     border-radius: 10px;
     padding: 10px;
+    width: 30%;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -41,6 +42,7 @@
         gap: 5px;
       }
       .forecast-card {
+        width: 100%;
         flex-direction: row;
         justify-content: center;
         gap: 15px;
