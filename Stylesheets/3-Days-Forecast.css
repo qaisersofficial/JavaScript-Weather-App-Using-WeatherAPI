@@ -3,7 +3,7 @@
     margin-top: 20px;
   }
   
-  .forecast-cards {
+  #forecast-cards {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -37,7 +37,7 @@
     font-size: 1em;
   }
   @media (max-width:425px) {
-    .forecast-cards {
+    #forecast-cards {
         flex-direction: column;
         gap: 5px;
       }

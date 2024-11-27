@@ -19,7 +19,7 @@ div#weatherapp-container {
   /* Afternoon Background */
   div#weatherapp-container.afternoon {
     background-image:url("../images/Afternoon.jpg");
-    color: #333;
+    color: #91c2f7;
   }
   
   /* Night Background */
@@ -47,6 +47,6 @@ div#weatherapp-container {
   }
   @media (max-width:1425px){
     div#weatherapp-container {
-      height: fit-content;
+      /* height: fit-content; */
     }
   }
