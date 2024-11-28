@@ -1,4 +1,4 @@
-const API_KEY = "348a0d8017f1448a91d171151242311";
+import { API_KEY } from "./config.js";
 const FORECAST_URL = "https://api.weatherapi.com/v1/forecast.json";
 const Chache_Exp_Time = 30 * 60 * 1000; // 30 minutes
 
