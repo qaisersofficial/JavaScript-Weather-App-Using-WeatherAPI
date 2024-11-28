@@ -35,4 +35,6 @@ function setDynamicBackground(condition) {
     searchButton.style.backgroundColor = "#007bff";
   }
 }
+const change = "";
+setDynamicBackground(change);
 export { setDynamicBackground };

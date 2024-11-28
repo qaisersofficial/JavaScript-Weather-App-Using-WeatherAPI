@@ -1,10 +1,10 @@
 /* General Styles */
 html{
     height: 100%;
-    transition: all 0.5s ease;
-    background-size: auto;
+    transition: all 2s ease;
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     font-family: Arial, sans-serif;
   }
   /* Morning Background */
