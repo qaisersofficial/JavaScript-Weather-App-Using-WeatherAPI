@@ -1,37 +1,37 @@
 function setDynamicBackground(condition) {
   const hour = new Date().getHours();
-  const bgDiv = document.getElementById("weatherapp-container");
+  const body = document.querySelector("html");
   const searchButton = document.getElementById("search-btn");
   const changeColor = document.getElementById("current-weather-color");
-    bgDiv.className = "";
+    body.className = "";
     searchButton.style.backgroundColor = "";
     changeColor.style.color = "";
-    // console.log(bgDiv);
+    // console.log(body);
   if (condition.includes("rain")) {
-    bgDiv.classList.add("rainy");
+    body.classList.add("rainy");
     searchButton.style.backgroundColor = "#6e7f80";
     searchButton.style.color= "#010101";
   } else if (condition.includes("cloud")) {
-    bgDiv.classList.add("cloudy");
+    body.classList.add("cloudy");
     searchButton.style.backgroundColor = "#b0c4de";
     searchButton.style.color= "#162335";
   } else if (hour >= 6 && hour < 12) {
-    bgDiv.classList.add("morning");
+    body.classList.add("morning");
     searchButton.style.backgroundColor = "#ffd700";
     searchButton.style.color= "#552b00";
     changeColor.style.color = "	#5C4033";
   } else if (hour >= 12 && hour < 18) {
-    bgDiv.classList.add("afternoon");
+    body.classList.add("afternoon");
     searchButton.style.backgroundColor = "#007bff";
     changeColor.style.color="#FFFFFF";
   } else if (hour >= 18 || hour < 6) {
-    bgDiv.classList.add("night");
+    body.classList.add("night");
     searchButton.style.backgroundColor = "#483d8b";
     searchButton.style.color= "#fadfb9";
     changeColor.style.color = "rgb(86 61 6)";
    
   } else {
-    bgDiv.classList.add("default");
+    body.classList.add("default");
     searchButton.style.backgroundColor = "#007bff";
   }
 }
