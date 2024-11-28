@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="./Stylesheets/search-section.css" />
     <link rel="stylesheet" href="./Stylesheets/current-weather.css" />
     <link rel="stylesheet" href="./Stylesheets/3-Days-Forecast.css" />
-    <script src="./js/code.js"></script>
-    <script src="./js/ChangingBg.js" defer></script>
+    <link rel="stylesheet" href="./Stylesheets/loader.css" />
   </head>
   <body>
     <div id="weatherapp-container">
@@ -38,20 +37,18 @@
             City not found. Please try again!
           </p>
         </section>
+        <!-- Spinner -->
+        <div class="loader"></div>
         <!-- Current Weather Section -->
         <section class="current-weather" id="current-weather-color">
           <div id="weather-card" class="hidden">
-            <h2 id="city-name">City Name</h2>
+            <h2 id="city-name"></h2>
             <div class="weather-situation">
               <div class="weather-icon">
-                <img
-                  id="weather-icon"
-                  src="./images/cloud-icon.png"
-                  alt="Weather Icon"
-                />
+                <img id="weather-icon" src="" alt="Weather Icon" />
               </div>
               <div class="temperature">
-                <h3 id="temperature">27°C</h3>
+                <h3 id="temperature"></h3>
               </div>
             </div>
             <div class="details">
@@ -61,7 +58,7 @@
                     <p>Humidity:</p>
                   </div>
                   <div>
-                    <p id="humidity">65%</p>
+                    <p id="humidity"></p>
                   </div>
                 </div>
                 <div class="wind-speed-container">
@@ -69,7 +66,7 @@
                     <p>Wind:</p>
                   </div>
                   <div>
-                    <p id="wind-speed">10 km/h</p>
+                    <p id="wind-speed"></p>
                   </div>
                 </div>
               </div>
@@ -78,13 +75,18 @@
                   <p>Last updated:</p>
                 </div>
                 <div>
-                  <p id="last-updated">10:05 AM</p>
+                  <p id="last-updated"></p>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        <!-- 3-Day Forecast Section -->
+        <section class="forecast" id="forecast-section">
+          <div id="forecast-cards" class="hidden"></div>
+        </section>
       </div>
     </div>
+    <script type="module" src="./js/code.js"></script>
   </body>
 </html>

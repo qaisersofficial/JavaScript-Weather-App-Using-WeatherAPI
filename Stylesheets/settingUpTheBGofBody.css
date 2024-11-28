@@ -1,48 +1,44 @@
 /* General Styles */
-div#weatherapp-container {
-    width: 100%;
-    height: 100vh;
-    transition: all 0.5s ease;
+html{
+    height: 100%;
+    transition: all 2s ease;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    position:absolute;
+    /* background-repeat: no-repeat; */
     font-family: Arial, sans-serif;
   }
-  
   /* Morning Background */
-  div#weatherapp-container.morning {
+ html.morning {
     background-image:url("../images/Morning.jpg");
     color: #333;
   }
   
   /* Afternoon Background */
-  div#weatherapp-container.afternoon {
+ html.afternoon {
     background-image:url("../images/Afternoon.jpg");
-    color: #333;
+    color: #91c2f7;
   }
   
   /* Night Background */
-  div#weatherapp-container.night {
+ html.night {
     background-image: url("../images/Night.jpg");
-    color: #fff;
+    color: rgb(68, 18, 27);
   }
   
   /* Rainy Background */
-  div#weatherapp-container.rainy {
+ html.rainy {
     background-image: url("../images/Rainy.jpg");
     /* color: firebrick; */
   }
   
   /* Cloudy Background */
-  div#weatherapp-container.cloudy {
-    background-image: url('../images/Cloudy.jpg') no-repeat center center/cover;
+ html.cloudy {
+    background-image: url('../images/Cloudy.jpg');
     color: #333;
   }
   
   /* Default Background */
-  div#weatherapp-container.default {
+ html.default {
     background-image: linear-gradient(to bottom, #f0f0f0, #ffffff);
     color: #333;
   }
-  
