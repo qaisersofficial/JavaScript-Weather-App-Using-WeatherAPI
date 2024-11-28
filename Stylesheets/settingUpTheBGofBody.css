@@ -1,8 +1,8 @@
 /* General Styles */
-html {
-    height: -webkit-fill-available;
+html{
+    height: 100%;
     transition: all 0.5s ease;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
     font-family: Arial, sans-serif;
@@ -22,7 +22,7 @@ html {
   /* Night Background */
  html.night {
     background-image: url("../images/Night.jpg");
-    color: #fff;
+    color: rgb(68, 18, 27);
   }
   
   /* Rainy Background */

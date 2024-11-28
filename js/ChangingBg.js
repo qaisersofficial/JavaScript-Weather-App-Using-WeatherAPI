@@ -28,14 +28,11 @@ function setDynamicBackground(condition) {
     body.classList.add("night");
     searchButton.style.backgroundColor = "#483d8b";
     searchButton.style.color= "#fadfb9";
-    changeColor.style.color = "rgb(86 61 6)";
+    changeColor.style.color = "#000c66";
    
   } else {
     body.classList.add("default");
     searchButton.style.backgroundColor = "#007bff";
   }
 }
-
-// Simulate calling the function (replace with actual weather condition)
-const mockWeatherCondition = ""; // Example: 'clear', 'clouds', 'rain'
-setDynamicBackground(mockWeatherCondition);
+export { setDynamicBackground };
