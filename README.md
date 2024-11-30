@@ -1,10 +1,12 @@
 # Weather Application 🌤️
+
 <p>
   A responsive weather application that fetches and displays real-time weather data for any location, with support for geolocation-based weather updates. The app dynamically adjusts its UI based on weather conditions and is fully optimized for various devices.
 </p>
 <hr>
 
- ## 🌍 Geolocation-Based Weather Updates
+## 🌍 Geolocation-Based Weather Updates
+
  <ul>
    <li>Automatically fetches and displays the weather data for the user’s current location on page load.</li>
    <li>Prompts the user to allow location access with fallback error handling if access is denied or unavailable.</li>
@@ -27,7 +29,8 @@
    <li>Weather data is cached in localStorage for 30 minutes to minimize redundant API calls.</li>
  </ul>
 
-   ## 🔄 Loading Spinner
+## 🔄 Loading Spinner
+
  <ul>
    <li>Provides visual feedback while fetching weather data or processing geolocation requests.</li>
  </ul>
@@ -42,16 +45,21 @@
  <hr>
 
 ## Technologies Used
+
 ### Frontend
+
 **HTML5:** Structure of the app. <br>
 **CSS3:** Styling and responsive design with media queries. <br>
 **JavaScript (ES6):** Core functionality, including API calls and UI updates. <br>
+
 ### API
+
  <ul>
         <li><a href="https://www.weatherapi.com/">WeatherAPI</a>: Fetches real-time weather data and a 3-day forecast.</li>
     </ul>
 
 ## Setup Instructions
+
   <h3>1.  Clone the Repository </h3>
     <pre>
         <code>
@@ -63,11 +71,12 @@
  <h3>2. Open with live server</h3>
 
   <h3>3. Open the Application</h3>
-  <p>Visit <a href="#">link here when I host it via netlify</a> (or your server URL) in the browser.</p>
+  <p>Visit <a href="https://weather-app-qasier.netlify.app/">demo</a> ( https://weather-app-qasier.netlify.app/ ) in the browser.</p>
 
   <hr>
 
-  ## File Structure
+## File Structure
+
   <pre>
       <code>
 JAVASCRIPT-WEATHER-APP-USING-WEATHERAPI/
@@ -96,7 +105,8 @@ JAVASCRIPT-WEATHER-APP-USING-WEATHERAPI/
     </pre>
 <hr>
 
-  ## How It Works
+## How It Works
+
   <ol>
       <li><strong>Page Load (Geolocation):</strong>
           <ul>
@@ -123,7 +133,8 @@ JAVASCRIPT-WEATHER-APP-USING-WEATHERAPI/
     </ol>
 <hr>
 
-  ## Contributing
+## Contributing
+
   <p>Contributions are welcome! If you'd like to contribute:</p>
   <ol>
       <li>Fork the repository.</li>
@@ -134,5 +145,6 @@ JAVASCRIPT-WEATHER-APP-USING-WEATHERAPI/
     </ol>
 <hr>
 
-  ## License
+## License
+
   <p>This project is licensed under the MIT License.</p>
