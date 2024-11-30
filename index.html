@@ -24,7 +24,7 @@
         </header>
         <!-- Search Section -->
         <section class="search-section">
-          <div class="search-container">
+          <div class="search-container" aria-label="Search for city weather">
             <input
               type="text"
               id="city-input"
@@ -38,9 +38,13 @@
           </p>
         </section>
         <!-- Spinner -->
-        <div class="loader"></div>
+        <div class="loader" role="status" aria-hidden="true"></div>
         <!-- Current Weather Section -->
-        <section class="current-weather" id="current-weather-color">
+        <section
+          class="current-weather"
+          id="current-weather-color"
+          aria-live="polite"
+        >
           <div id="weather-card" class="hidden">
             <h2 id="city-name"></h2>
             <div class="weather-situation">
@@ -82,7 +86,7 @@
           </div>
         </section>
         <!-- 3-Day Forecast Section -->
-        <section class="forecast" id="forecast-section">
+        <section class="forecast" id="forecast-section" aria-live="polite">
           <div id="forecast-cards" class="hidden"></div>
         </section>
       </div>
